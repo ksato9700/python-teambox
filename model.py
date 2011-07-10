@@ -28,7 +28,6 @@ class TeamboxObject(object):
         return str(map(lambda k: getattr(self, k),
                        filter(lambda n:n[0]!='_', dir(self))))
 
-
 class List(TeamboxObject):
     def __init__(self, jsr): 
         self.objects = map(TeamboxObject.generate_obj, jsr['objects'])
